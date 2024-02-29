@@ -19,8 +19,6 @@ function ViewEvents() {
 
   const [homeEvents, setHomeEvents] = useState([])
 
-  // const [bookedEvent, setBookedEvent] = useState([])
-
 
   const getallEvent = async () => {
     const token = sessionStorage.getItem("token")
@@ -36,21 +34,6 @@ function ViewEvents() {
     }
   }
 
-  // const booknow = async (id) => {
-  //   const token = sessionStorage.getItem('token')
-  //   console.log(token);
-  //   const header = {
-  //     "Content-Type": "application/json",
-  //     "Authorization": `Bearer ${token}`
-  //   }
-  //   const result=await bookevent(id,header)
-  //   console.log(result);
-  //   if (token) {
-  //     if(result.status===200){
-  //       setBook(result.data)
-  //     }
-  //   }
-  // }
 
 
   useEffect(() => {
@@ -86,15 +69,9 @@ function ViewEvents() {
                         <a href={event.locationUrl} style={{ textDecoration: 'none', color: 'white' }}><p><i class="fa-solid fa-location-dot me-2"></i>{event.location}</p></a>
                         <p><i class="fa-regular fa-calendar-days me-2"></i>{event.date},{event.time}</p>
                         <div className='d-flex justify-content-center align-items-center'>
-                          {/* <Link to={'/book'} style={{ textDecoration: 'none' }}>
-                            <div className='d-flex justify-content-center align-items-center'>
-                              <button className='btn btn-danger'>Book ₹ {event.amount}</button>
-                            </div>
-                          </Link> */}
                            <div className='d-flex justify-content-center align-items-center'>
                               <button className='btn btn-danger'>Amount ₹ {event.amount}</button>
                             </div>
-                          {/* <button className='btn btn-dark ms-2'><i class="fa-solid fa-heart me-1" style={{ color: 'white' }}></i>1k</button> */}
                           </div>
                       </div>
                     </div>

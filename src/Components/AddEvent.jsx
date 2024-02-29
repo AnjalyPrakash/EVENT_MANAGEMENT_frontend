@@ -3,8 +3,6 @@ import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import './Component.css'
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 import { addEventAPI } from '../API/api';
 import AdminEventCard from './AdminEventCard';
 import { viewEventResponseContext, viewEventUserResponseContext } from '../ContextShare/Context';
